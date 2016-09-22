@@ -49,3 +49,25 @@ Core Page Details
 	@include page-width;
 	margin-top:30px;
 }
+
+// Demo styles for the grid examples
+
+
+// Mixin to add some style and substance to the grid
+
+@mixin grid-test{
+	height:50px;
+	background:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAYAAACp8Z5+AAAAHklEQVQIW2NkQAXGjEh8YyD7LEwAzAFJggTgHJAAAE+uAzjGgU3wAAAAAElFTkSuQmCC) repeat;
+	color:#222;
+}
+
+
+
+
+// Page Content
+
+header{
+	@include column(12);
+	@include margin-bottom;
+	text-align: center;
+}
