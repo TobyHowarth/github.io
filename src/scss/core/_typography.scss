@@ -1,0 +1,176 @@
+/*
+-----------------------
+-----------------------
+
+Base line Typography
+
+-----------------------
+-----------------------
+
+*/
+
+
+
+// We Start with a lovely mixin or 2
+
+
+@mixin font-rem($size) {
+	font-size: 0px + $size;
+	font-size: $size / $base-font-size +rem;
+}
+
+@mixin uppercase{
+	text-transform:uppercase;
+	letter-spacing:2px;
+}
+
+
+
+
+// We Declare our Line Height
+
+$line-height:1.4;
+
+
+// Body Styles
+
+body{
+	font-family:$body-font;
+	line-height:$line-height;
+}
+
+p{
+	@include font-rem(16);
+	line-height:$line-height;
+	@include margin-bottom;
+
+}
+
+strong{
+	font-weight:800;
+}
+
+
+em{
+	font-style:italic;
+}
+
+
+
+// Links 
+
+a{	
+	display:inline-block;
+	text-decoration:none;
+}
+
+a:active{
+	position:relative;
+	top:1px;
+}
+
+a.underline{
+	text-decoration:underline;
+}
+
+
+p a{
+	text-decoration:none;
+}
+
+// Buttons Made from Links
+
+a.btn{
+	display:inline-block;
+	padding:8px 12px;
+	background-color:green;
+	@include border-radius;
+	color:white;
+	text-decoration:none;
+	@include margin-bottom;
+}
+
+a.btn:hover{
+	background-color:#222;
+}
+
+// Lists
+
+
+ul, ol, dl{
+	@include margin-bottom;
+}
+
+ul{
+	list-style:none;
+}
+
+ul li, ol li, dl dt{
+	margin:0 0 5px 0;
+}
+
+li ul, li ol, dt dl{
+	margin:0 0 0 20px;
+}
+
+@mixin nav--horizontal{
+	display:inline-block;
+	float:left;
+	margin:0 10px 0 0;
+	padding:8px;
+	line-height:1.5;
+}
+
+//floating lists
+
+// Mixin to float lists in a row, define the list width in the include 
+
+	// 30% 3 Col 
+
+@mixin list-col($col-list-width){
+	width:$col-list-width;
+	float:left;
+	margin-right:10px;
+}
+
+
+
+// Headings
+
+
+h1{
+	@include font-rem(32);
+	@include margin-bottom;
+}
+
+
+h2{
+	@include font-rem(26);
+	@include margin-bottom;
+}
+
+
+h3{
+	@include font-rem(22);
+	@include margin-bottom;
+}
+
+
+h4{
+	@include font-rem(20);
+	@include margin-bottom;
+}
+
+
+h5{
+	@include font-rem(18);
+	@include margin-bottom;
+}
+
+h6{
+	@include font-rem(16);
+	@include margin-bottom;
+}
+
+
+
