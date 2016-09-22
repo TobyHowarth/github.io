@@ -1,0 +1,72 @@
+/*
+--------------------------
+Sass Settings for Project
+--------------------------
+
+--------------
+Index of Parts
+--------------
+
+1. $Page - Define the page width here if desktop is a max width.
+2. $Font Sizing - Base font Size with line height declared
+3. $Branding - Brand colours based on design for use in the build
+4. $Typography - Fonts for the headings and body.
+5. $Links - colors and styles for anchor links.
+6. $Errors - Colors for error messages based around forms
+7. $Flow - Widths, Margins and Padding for the layout
+
+*/
+
+// $Page
+
+@mixin page-width{
+	max-width:1200px;
+	margin:0 auto;
+}
+
+// $Font
+
+$base-font-size: 	16;
+$base-line-height: 	24;
+
+
+// $Branding
+
+$brand-color-main: 		blue;
+$brand-color-green: 	green;
+
+
+// Standard Colors for Use in Build
+
+$brand-black:			black;
+$brand-grey: 			grey;
+$brand-white: 			white;
+
+
+
+// $Typography
+
+$body-font: 			Georgia, Serif;
+$header-font: 			$body-font;
+
+
+// $Links
+
+$link-color:			red;
+$link-color-hover: 		darken($link-color, 10);
+
+
+// $Errors
+
+$error: 				red;
+$warning: 				purple;
+$success: 				green;
+$information: 			wheat;
+
+
+// $Flow
+
+
+@mixin margin-bottom{
+	margin-bottom:20px;
+}

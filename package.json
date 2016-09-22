@@ -1,0 +1,10 @@
+{
+  "name": "npm-is-awesome",
+  "version": "1.0.0",
+  "scripts": {
+    "scss": "node-sass --output-style compressed -o dist/css src/scss/project.scss"
+  },
+  "devDependencies": {
+    "node-sass": "^3.10.0"
+  }
+}

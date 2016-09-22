@@ -1,0 +1,51 @@
+/*
+-----------------------
+CSS Styles for PROJECT NAME
+
+Author: Toby Howarth
+-----------------------
+*/
+
+
+//ALL THE IMPORTS
+
+//First we add in a reset and some normalize magic and a debug file to pick up any code issues (inuit.css genius again)
+
+@import "core/_reset.scss";
+@import "core/_normalize.scss";
+@import "core/_debug.scss";
+
+//Mixins for non specific things loaded first to ensure they work
+
+@import "core/_mixins.scss";
+
+// Settings file for core values used throught the project
+@import "_settings.scss";
+
+// Grid System Based on Variables in grid.scss
+@import "core/_grid.scss";
+
+//Some sexy Tpography Styling
+
+@import "core/_typography.scss";
+
+// Awesome inuit.css based Media Object
+
+@import "core/_media.scss";
+
+
+/*
+---------------
+Core Page Details
+---------------
+*/
+
+
+
+
+// Project Main
+
+.page{
+	@include page-width;
+	margin-top:30px;
+}
