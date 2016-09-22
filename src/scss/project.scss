@@ -71,3 +71,81 @@ header{
 	@include margin-bottom;
 	text-align: center;
 }
+
+//Magic Nav
+
+nav {
+  color: #333;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 46px;
+  padding-top: 8px;
+  right: 0;
+  z-index: 1000;
+  cursor: pointer;
+  overflow: hidden;
+  -webkit-transform: translate(0,0);
+  -moz-transform: translate(0,0);
+  -o-transform: translate(0,0);
+  transform: translate(0,0);
+  -webkit-transition: -webkit-transform .4s, height .3s, background .4s;
+  -moz-transition: -moz-transform .4s, height .3s, background .4s;
+  transition: transform .4s, height .3s, background .4s;
+}
+
+/* when hidden it goes up */
+nav.invisible {
+  -webkit-transform: translate(0,-64px);
+  -moz-transform: translate(0,-64px);
+  -o-transform: translate(0,-64px);
+  transform: translate(0,-64px);
+  -webkit-transition: -webkit-transform .2s;
+  -moz-transition: -moz-transform .2s;
+  -o-transition: -o-transform .2s;
+  transition: transform .2s;
+  opacity: 0;
+}
+
+/* when shown & detached position is fixed */
+nav.detached {
+  position: fixed;
+  background: rgba(255,255,255,.9);
+  -webkit-transition: -webkit-transform .3s, height .3s, background .4s, opacity .3s;
+  -moz-transition: -moz-transform .3s, height .3s, background .4s, opacity .3s;
+  -o-transition: -o-transform .3s, height .3s, background .4s, opacity .3s;
+  transition: transform .3s, height .3s, background .4s, opacity .3s;
+}
+
+/* increases menu width & height */
+nav.expanded {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  cursor: default;
+  background: rgba(255,255,255,.85);
+}
+
+/* positions navigation content */
+#navigation {
+  -webkit-transform: translate(0,-700px);
+  -moz-transform: translate(0,-700px);
+  -o-transform: translate(0,-700px);
+  transform: translate(0,-700px);
+  opacity: 0;
+  padding-top: 2em;
+  text-align: center;
+  -webkit-transition: -webkit-transform .15s, opacity .7s;
+  -moz-transition: -moz-transform .15s, opacity .7s;
+  -o-transition: -o-transform .15s, opacity .7s;
+  transition: transform .15s, opacity .7s;
+}
+
+/* shows navigation */
+nav.expanded #navigation {
+  -webkit-transform: translate(0,0);
+  -moz-transform: translate(0,0);
+  -o-transform: translate(0,0);
+  transform: translate(0,0);
+  opacity: 1;
+}
